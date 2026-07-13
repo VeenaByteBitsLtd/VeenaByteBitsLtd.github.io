@@ -18,10 +18,7 @@ function loadSharedContent() {
         <button onclick="toggleTheme()" style="background: none;border: none;color: white;font-size: 1.5rem;cursor:pointer;">
         <i class="fas fa-moon" id="theme-icon"></i>
         </button>
-        <button onclick=function downloadResume() {
-        
-        }
-        "downloadResume()" class="btn-primary" style="padding: 10px 24px;">Resume</button>
+      
         <button onclick="toggleMobileMenu()" style="font-size: 1.8rem;background: white;border:
          yellow;color: deepskyblue;cursor: pointer;padding: 5px 10px;">☰</button>
         </div>
@@ -48,6 +45,7 @@ function loadSharedContent() {
     document.body.insertAdjacentHTML('beforeend', footerHTML);
 }
 
+
 function toggleMobileMenu() {
     let menu = document.getElementById('mobile-menu')
 
@@ -70,7 +68,7 @@ function toggleMobileMenu() {
             <a href="index.html" style="display:block; padding:12px 0; color: inherit; text-decoration: none; font-size:1.1rem;">Home</a>
             <a href="about.html" style="display: block; padding: 12px 0; color: inherit; text-decoration: none;font-size: 1.1rem;">About</a>
             <a href="skills.html" style="display: block; padding: 12px 0; color: inherit; text-decoration: none; font-size: 1.1rem;">Skills</a>
-            <a href="resume.html" style="display: block; padding: 12px 0; color: red;text-decoration: black; font-size: 1.1rem;">Resume</a>
+            <a href="resume.html" style="display: block; padding: 12px 0; color: green;text-decoration: black; font-size: 1.1rem;">Resume</a>
             <a href="projects.html" style="display: block; padding: 12px 0; color: inherit; text-decoration: none; font-size: 1.1rem;">Projects</a>
             <a href="contacts.html" style="display: block; padding: 12px 0; color: inherit; text-decoration: none; font-size: 1.1rem;">Contacts</a>
             
@@ -93,6 +91,7 @@ function handleScroll() {
     });
 }
 
+
 function typeWriter() {
     const text = "SECURE + AUTOMATED + CONNECTED";
     const element = document.getElementById('tagline')
@@ -110,10 +109,7 @@ function typeWriter() {
     type()
 }
 
-function downloadResume() {
-    window.location.href = "veena_resume.pdf";
 
-}
 
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeWriter, 800);
@@ -127,4 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(handleScroll, 300)
 
 
+function downloadResume() {
+    window.location.href="veena_resume.pdf";
+}
 });
