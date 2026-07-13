@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+
+:root {
+    --primary: #22c55e;
+    --bg: #0f172a;
+    --card: #1e2937;
+    --text: #e2e8f0;
+    --text-light: #cbd5e1;
+}
+
+[data-theme="light"] {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --text-align: #475569;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.heading-font {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #334155;
+    z-index: 1000;
+}
+
+[data-theme="light"] nav {
+    background: rgba(248, 250, 252, 0.98);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+main {
+    padding-top: 100px;
+    min-height: calc(100vh - 200px);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid #334155;
+    border-radius: 24px;
+    padding: 2rem;
+    transition: all 0.4s ease;
+
+}
+
+[data-theme="light"] .card {
+    border-color: #e2e8f0;
+}
+
+h1, h2, h3 {
+    color: var(--text);
+
+}
+
+p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #0f172a;
+    padding: 14px 32px;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary:hover {
+    background: #86efac;
+    transform: scale(1.05);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translate(0);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+}
+
+main p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+.card {
+    padding: 6.0rem !important;
+}
+
+.heading-font {
+    line-height: 1.1;
+}
+
+/*Fix Long words */
+body {
+    overflow-x: hidden;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: black;
+    transition: width 0.4s ease-in-out;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+
+}
+
+.nav-link:hover {
+    color: #a3e635;
+!important;
+}
+
+section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+nav {
+    margin-top: 0;
+}

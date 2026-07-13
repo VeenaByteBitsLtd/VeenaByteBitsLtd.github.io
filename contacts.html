@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Contacts - Veena ByteBits Limited</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+<main style="max-width:700px; margin:0 auto; padding: 5rem 2rem;">
+    <h1 class="heading-font fade-in" style="text-align: center; font-size: 3.5rem; margin-bottom: 2rem;">Get In
+        Touch</h1>
+
+    <form id="contact-form" class="card fade-in">
+        <div style="margin-bottom: 1.5rem;">
+            <label for="name" style="display:block; margin-bottom:8px; font-weight:500;">Your Name</label>
+            <input type="text" id="name" placeholder="Your Name" required
+                   style="width: 100%; padding:16px; background: var(--bg); border:1px solid #475569;border-radius: 12px; color: inherit;">
+
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+            <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500;">Your Email</label>
+            <input type="text" id="email" placeholder="you@example.com" required
+                   style="width: 100%; padding: 16px; background: var(--bg);border:1px solid #475569;border-radius: 12px;color: inherit;">
+
+        </div>
+        <div style="margin-bottom: 1.5rem;">
+            <label for="message" style="display: block; margin-bottom: 8px; font-weight: 500;">Message</label>
+            <textarea id="message" rows="6" placeholder="Write your message here..." required
+                      style="width: 100%; padding: 16px; background:var(--bg); border: 1px solid #475569; border-radius: 12px; color: inherit; resize:vertical;"></textarea>
+
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%;padding:18px;font-size: 1.1rem;">
+            Send Message
+        </button>
+    </form>
+</main>
+<script src="script.js"></script>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert("Thank you! Your message has been received (This is a demo).");
+        this.reset()
+
+    });
+</script>
+</body>
+</html>
