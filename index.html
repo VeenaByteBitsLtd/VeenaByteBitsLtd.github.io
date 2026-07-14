@@ -11,7 +11,7 @@
 <body>
 <main>
     <section
-            style="animation: glow 2s infinite alternate; height: 100vh; width: 150vh; margin: 0; padding:0.2rem ; display:flex; align-items:center; justify-content: center; text-align:center;
+            style="animation: glow 2s infinite alternate; height: 100vh; width: 100%; margin: 0; padding:0.2rem ; display:flex; align-items:center; justify-content: center; text-align:center;
              background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9)),url('homeimage.jpg') center/cover no-repeat fixed; position: relative;">
         <div style="position: absolute; top: 30px; left: 50%; transform: translate(-50%); background: rgba(15,23,42,0.9); padding:10px 40px; border-radius: 50px; border:1px solid lightskyblue; z-index:10; display:flex; gap:2rem; box-shadow: 0 0 20px rgba(34,197,94,0.3);">
 
@@ -36,9 +36,8 @@
                 Currently open to new opportunities in Linux Administration, Network Engineering, and Security Roles.
             </div>
 
-            <h1 class="heading-font fade-in"
-                style="font-size: clamp(3.5rem,9vw,6rem); line-height: 1.05; margin-bottom: 1rem; color: white;">
-                Veena ByteBits Limited
+            <h1 id="company-name" class="heading-font fade-in"
+                style="font-size: clamp(3.2rem,8vw,5.5rem); line-height: 1.05; margin-bottom: 1rem; color: white; position: relative; display: inline-block;">
             </h1>
 
             <p class="fade-in" id="tagline"
@@ -55,5 +54,25 @@
 
     </section>
 </main>
+<div style="position: absolute; bottom: 60px; left: 40px; font-family: monospace; color: lawngreen; font-size: 0.9rem; opacity: 0.6; z-index:1;line-height: 1.6;">
+    <div> scanning network...</div>
+    <div> firewall_bypassed</div>
+    <div> encryption_decrypted</div>
+</div>
+<script>
+    const text = "Veena ByteBits Limited";
+    const element = document.getElementById('company-name');
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 800);
+        }
+    }
+
+    setTimeout(typeWriter, 600);
+</script>
 </body>
 </html>
