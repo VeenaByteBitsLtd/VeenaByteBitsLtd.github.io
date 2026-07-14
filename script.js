@@ -10,8 +10,9 @@ function loadSharedContent() {
             <li><a href="index.html" class="nav-links" style="color: #a3e635; text-decoration: none; font-weight: 500;">HOME</a> </li>
             <li><a href="about.html" class="nav-links" style="color: chartreuse; text-decoration: none; font-weight: 500;">ABOUT</a> </li>
             <li><a href="skills.html" class="nav-links" style="color: cyan; text-decoration: none; font-weight: 500;">SKILLS</a> </li>
-            <li><a href="projects.html" class="nav-links" style="color: red; text-decoration: #a3e635; font-weight: 500;">PROJECTS</a> </li>
             <li><a href="resume.html" class="nav-links" style="color: purple; text-decoration: white; font-weight: 500;">RESUME</a> </li>
+            <li><a href="services.html" class="nav-links" style="color: goldenrod; text-decoration: lawngreen; font-weight: 500;">SERVICES</a></li>
+            <li><a href="projects.html" class="nav-links" style="color: red; text-decoration: #a3e635; font-weight: 500;">PROJECTS</a> </li>
             <li><a href="contacts.html" class="nav-links" style="color: deepskyblue; text-decoration: black; font-weight: 500;">CONTACTS</a> </li>
         </ul>
         <div style="display: flex; align-items: center; gap: 1rem;">
@@ -69,6 +70,7 @@ function toggleMobileMenu() {
             <a href="about.html" style="display: block; padding: 12px 0; color: inherit; text-decoration: none;font-size: 1.1rem;">About</a>
             <a href="skills.html" style="display: block; padding: 12px 0; color: inherit; text-decoration: none; font-size: 1.1rem;">Skills</a>
             <a href="resume.html" style="display: block; padding: 12px 0; color: green;text-decoration: black; font-size: 1.1rem;">Resume</a>
+            <a href="services.html" style="display: block; padding: 12px 0; color: red; text-decoration: white; font-size: 1.1rem;">Services</a>
             <a href="projects.html" style="display: block; padding: 12px 0; color: inherit; text-decoration: none; font-size: 1.1rem;">Projects</a>
             <a href="contacts.html" style="display: block; padding: 12px 0; color: inherit; text-decoration: none; font-size: 1.1rem;">Contacts</a>
             
