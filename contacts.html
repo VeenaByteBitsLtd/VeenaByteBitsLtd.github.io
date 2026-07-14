@@ -16,26 +16,26 @@
     <form id="contact-form" class="card fade-in" action="https://formspree.io/f/xqerazdl" method="post">
         <div style="margin-bottom: 1.5rem;">
             <label for="name" style="display:block; margin-bottom:8px; font-weight:500;">Your Name</label>
-            <input type="text" id="name" placeholder="Your Name" required
+            <input name="text" id="name" placeholder="Your Name" required
                    style="width: 100%; padding:16px; background: var(--bg); border:1px solid #475569;border-radius: 12px; color: inherit;">
 
         </div>
         <div style="margin-bottom: 1.5rem;">
             <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500;">Your Email</label>
-            <input type="text" id="email" placeholder="you@example.com" required
+            <input name="text" id="email" placeholder="you@example.com" required
                    style="width: 100%; padding: 16px; background: var(--bg);border:1px solid #475569;border-radius: 12px;color: inherit;">
 
         </div>
 
         <div style="margin-bottom: 1.5rem;">
             <label for="phone" style="display: block; margin-bottom: 8px; font-weight: 500;">Your Phone Number</label>
-            <input type="tel" id="phone" placeholder="0712 345678 or 0123 456789" required
+            <input name="tel" id="phone" placeholder="0712 345678 or 0123 456789" required
                    style="width: 100%; padding: 16px; background: var(--bg);border: 1px solid #475569;border-radius: 12px;color: inherit;">
         </div>
 
-        <div style="margin-bottom: 1.5rem;">
+        <div style="margin-bottom: 2rem;">
             <label for="message" style="display: block; margin-bottom: 8px; font-weight: 500;">Message</label>
-            <textarea id="message" rows="6" placeholder="Write your message here..." required
+            <textarea name="message" id="message" rows="7" placeholder="Write your message here..." required
                       style="width: 100%; padding: 16px; background:var(--bg); border: 1px solid #475569; border-radius: 12px; color: inherit; resize:vertical;"></textarea>
 
         </div>
