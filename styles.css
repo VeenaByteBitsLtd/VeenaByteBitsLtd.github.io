@@ -170,3 +170,26 @@ section {
 nav {
     margin-top: 0;
 }
+
+.nav-links {
+    display: flex;
+    gap: 2.2rem;
+
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px #22c55e;
+    }
+    to {
+        box-shadow: 0 0 80px #22c55e;
+    }
+
+}

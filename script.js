@@ -3,10 +3,11 @@ function loadSharedContent() {
     <nav style="background: rgba(10,15,30,0.95);height: 65px; border-bottom: 1px solid #22c55e">
         <div class="nav-container" style="max-width:1280px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
         <a href="index.html" style="display: flex; align-items: center;gap: 15px; text-decoration: auto; color: deepskyblue;" ">
+        <img src="company_logo.png" alt="Veena ByteBits Limited" style="height: 50px; width: auto;">
         
         <span style="font-size:1.6rem;color: #22c55e; font-weight:600;">VBB</span><span style="color: deeppink;">Veena ByteBits Limited </span>
         </a>
-        <ul class="nav-links" style="display: flex; gap: 2.5rem;list-style: none; margin: 0;">
+        <ul class="nav-links" style="display: flex; gap: 2.2rem;list-style: none; margin: 0; align-items: center;">
             <li><a href="index.html" class="nav-links" style="color: #a3e635; text-decoration: none; font-weight: 500;">HOME</a> </li>
             <li><a href="about.html" class="nav-links" style="color: chartreuse; text-decoration: none; font-weight: 500;">ABOUT</a> </li>
             <li><a href="skills.html" class="nav-links" style="color: cyan; text-decoration: none; font-weight: 500;">SKILLS</a> </li>
@@ -111,8 +112,24 @@ function typeWriter() {
     type()
 }
 
+// Home Page Animations
 
+function homePageAnimations() {
+    const tagline = document.getElementById('tagline');
+    if (tagline) {
+        tagline.style.opacity = '0';
+        setTimeout(() => {
+            tagline.style.transition = 'opacity 5s ease';
+            tagline.style.opacity = '4';
+        }, 1800);
+    }
+}
 
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+        setTimeout(homePageAnimations, 400);
+    }
+});
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeWriter, 800);
 });
@@ -122,10 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', savedTheme);
     document.getElementById('theme-icon').className = savedTheme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
     window.addEventListener('scroll', handleScroll);
-    setTimeout(handleScroll, 300)
+    setTimeout(handleScroll, 600)
 
 
-function downloadResume() {
-    window.location.href="veena_resume.pdf";
-}
+    function downloadResume() {
+        window.location.href = "veena_resume.pdf";
+    }
 });
